@@ -13,7 +13,7 @@ while True:
     elif current_light == "green = go":
         print(traffic_lights[2])
         time.sleep(3)
-        current_light = "red = stop"
+
         
 
 

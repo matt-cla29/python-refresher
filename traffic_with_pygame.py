@@ -1,8 +1,26 @@
 import pygame
 import time
 
-pygame = pygame.draw.rect()
-pygame = pygame.draw.circle()
+pygame.init()
+
+screen = pygame.display.set_mode((300, 450))
+screen2 = pygame.display.set_mode((300, 450))
+screen3 = pygame.display.set_mode((300, 450))
+screen4 = pygame.display.set_mode((300, 450))
+pygame.display.set_caption("UK Traffic Lights")
+
+color = (128, 128, 128)
+color2 = (255, 0, 0)
+color3 = (255, 165, 0)
+color4 = (0, 255, 0)
+         
+start_time = pygame.time.get_ticks()
+
+pygame.draw.rect(screen, color,pygame.Rect(50, 50, 200, 350))
+pygame.draw.circle(screen2, color2, (150,120), 40 ) #red
+pygame.draw.circle(screen3, color3, (150,230), 40 ) #amber
+pygame.draw.circle(screen4, color4, (150,335), 40 ) #amber
+pygame.display.flip()
 
 current_light = "red = stop"
 traffic_lights = ["red = stop", "amber = wait", "green = go"]
