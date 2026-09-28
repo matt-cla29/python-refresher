@@ -14,7 +14,19 @@ color2 = (255, 0, 0)
 color3 = (255, 165, 0)
 color4 = (0, 255, 0)
          
-start_time = pygame.time.get_ticks()
+
+
+running = True
+
+while running:
+ 
+    # Allow the user to close the window.
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    start_time = pygame.time.get_ticks()
+ 
 
 pygame.draw.rect(screen, color,pygame.Rect(50, 50, 200, 350))
 pygame.draw.circle(screen2, color2, (150,120), 40 ) #red
